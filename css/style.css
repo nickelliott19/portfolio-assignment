@@ -3,15 +3,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Sixtyfour+Convergence&display=swap" rel="stylesheet');
 
 body {
-    font-family: "Open Sans", sans-serif;;
+    font-family: "Open Sans", sans-serif;
     font-size: 15px;
     font-weight: 600;
     letter-spacing: 1px;
 }
 
 main {
-    padding-top: 2%;
+    padding: 10% 0;
 }
+
+footer{
+    font-size: .7em;
+    background-color: rgb(0, 0, 0);
+    color: aliceblue;
+    padding: 4%;
+}
+
+/* header img */
 
 .bg-img {
     height: 100vh;
@@ -19,71 +28,12 @@ main {
     object-fit: cover;
 }
 
-.nav-link, .navbar-brand {
-    font-size: 1em;
-    margin-right: 50px;
-    color:rgb(255, 255, 255)   
-}
-
-.navbar-brand {
-    font-size: 1.5em;
-    margin-left: 30px;
-    color:rgb(255, 255, 255)   
-    
-}
-
-.reach-me{
-    font-size: 2em;
-    font-weight: bold;
-    margin-bottom: 5%;
-}
-
-.social-media{
-    top: 10%;
-    display: flex;
-    margin-bottom: 5%;
-    gap: 5%;
-}
-
-
-.bio {
-    max-width: 800px;
-    margin: 0% auto;
-    padding: 60px;
-    font-size: 1em;
-}
-
-
-.navbar {
+.middle_title{
     position: absolute;
-    width: 100%;
-    top: 0;
-    z-index: 1;
-}
-
-.contact {
-    font-size: 3em;
-    padding-top: 60px;
-    padding-bottom: 5%;
-}
-
-.work_clips{
-    font-size: .7em;
-}
-
-.work_clips p{
-    margin: 2%;
-
-}
-
-.interests {
-    margin-top: 5%;
-    margin-bottom: 5%;
-}
-
-.interests-bio{
-    padding-left: 10%;
-
+    top: 50%;
+    left: 45%;
+    font-size: 4em;
+    color: aliceblue;
 }
 
 .scroll-down-arrow{
@@ -96,23 +46,67 @@ main {
     animation: bounce 2s infinite;
 }
 
-footer{
-    margin-top: 1%;
-    font-size: .7em;
-    background-color: rgb(0, 0, 0);
-    color: aliceblue;
-    padding: 4%;
+/* navbar */
+
+.nav-link, .navbar-brand {
+    font-size: 1em;
+    color:rgb(255, 255, 255);
 }
 
-.middle_title{
-    position: absolute;
-    top: 48%;
-    left: 47%;
-    font-size: 4em;
-    color: aliceblue;
+.navbar-brand {
+    font-size: 1.5em;
+    color:rgb(255, 255, 255);
     
 }
 
+.navbar {
+    position: absolute;
+    width: 95%;
+    top: 0;
+    z-index: 1;
+}
+
+.nav-link:hover,
+.navbar-brand:hover{
+    color: lightgray;
+}
+
+/* clips */
+
+.work_clips p{
+    margin-top: 2%;
+    font-size: .7em;
+}
+
+.fire, .racing, .purple, .idlewylde, .coffee, .homeless{
+    margin: 2%; 
+}
+
+.video-link {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .video-link img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .play-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2.5rem; 
+    color: white;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
+    text-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  }
+  
 @keyframes bounce {
     0%, 20%, 50%, 80%, 100% {
         transform: translateY(0);
@@ -125,34 +119,18 @@ footer{
     }
 }
 
-@media (max-width: 556px){
-    .scroll-down-arrow{
-        width: 50%
-    }
-}
-@media (max-width: 768px) {
-    .social-media {
-        flex-direction: column;
-        gap: 10px;              
+@media (min-width:574px){
+    .nav-item{
+        padding: 0 5%;
     }
 }
 
-@media (max-width: 768px) {
-    .contact p {
-        font-size: 2rem;
+@media (max-width: 576px){
+    .middle_title{
+        top: 40%;
+        left: 30%;
     }
-}
-
-@media (max-width: 576px) {
-    footer p {
-        font-size: 14px;  
-        text-align: center;  
-    }
-}
-
-@media (max-width: 768px) {
-    footer p {
-        font-size: 14px;  
-        text-align: center;  
+    .nav-item{
+        text-align: right;
     }
 }
