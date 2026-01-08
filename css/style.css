@@ -26,6 +26,7 @@ footer {
     height: 100vh;
     width: 100vw;
     object-fit: cover;
+    object-position: 55% center;
 }
 
 .middle_title {
